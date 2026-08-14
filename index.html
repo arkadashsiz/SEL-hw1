@@ -15,7 +15,13 @@
   <header class="header">
     <nav class="nav container" aria-label="Primary">
       <a href="#home" class="brand">alex.dev</a>
-      <button id="themeToggle">🌓</button>
+      <button id="themeToggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
       <ul class="nav__links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -46,22 +52,22 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section section--alt">
       <div class="container">
         <h2 class="section__title">Projects</h2>
         <div class="grid">
-          <div class="card">
-            <h3 class="card__title">Task Tracker</h3>
-            <p class="card__text">A kanban-style productivity app.</p>
-          </div>
-          <div class="card">
-            <h3 class="card__title">Weather Widget</h3>
-            <p class="card__text">A responsive weather dashboard.</p>
-          </div>
-          <div class="card">
-            <h3 class="card__title">Design System</h3>
-            <p class="card__text">A documented component library.</p>
-          </div>
+          <article class="card">
+            <h3>Task Tracker</h3>
+            <p>A kanban-style productivity app.</p>
+          </article>
+          <article class="card">
+            <h3>Weather Widget</h3>
+            <p>A responsive weather dashboard.</p>
+          </article>
+          <article class="card">
+            <h3>Design System</h3>
+            <p>A documented component library.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -79,10 +85,9 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section--alt">
       <div class="container">
         <h2 class="section__title">Get in touch</h2>
-        <p>Have a project in mind or just want to say hi?</p>
         <a href="mailto:hello@alex.dev" class="btn btn--primary">hello@alex.dev</a>
       </div>
     </section>
@@ -95,10 +100,29 @@
   </footer>
 
   <script>
+    // Theme toggle
     document.getElementById('themeToggle').addEventListener('click', () => {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
       html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    function toggleMenu(open) {
+      const isOpen = open ?? !navLinks.classList.contains('open');
+      navLinks.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    navToggle.addEventListener('click', () => toggleMenu());
+    navLinks.addEventListener('click', (e) => {
+      if (e.target.closest('a')) toggleMenu(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleMenu(false);
     });
   </script>
 
