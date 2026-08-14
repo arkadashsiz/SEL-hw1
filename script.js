@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme Toggle & Storage
+  // --- Theme Toggle & Persistence ---
   const themeToggle = document.getElementById('themeToggle');
   themeToggle?.addEventListener('click', () => {
     const html = document.documentElement;
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
   }
 
-  // Mobile Navigation
+  // --- Mobile Navigation ---
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') toggleMenu(false);
   });
 
-  // Scroll-Spy Highlighting
+  // --- Scroll-Spy Highlighting ---
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav__links a');
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach((section) => navObserver.observe(section));
 
-  // Scroll Reveal Observer
+  // --- Scroll Reveal Animations ---
   const revealElements = document.querySelectorAll('.section, .card');
   revealElements.forEach((el) => el.classList.add('reveal'));
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // Card Interactive 3D Tilt Effect
+  // --- 3D Card Tilt Effect ---
   const cards = document.querySelectorAll('.card');
   cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Back to Top Button Injection
+  // --- Floating Back to Top Button ---
   const scrollTopBtn = document.createElement('button');
   scrollTopBtn.classList.add('scroll-top');
   scrollTopBtn.setAttribute('aria-label', 'Scroll to top');

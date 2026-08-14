@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js" defer></script>
-  <meta name="description"
-    content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
+  <meta name="description" content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
   <title>Alex Doe — Front-End Developer</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +17,6 @@
       <a href="#home" class="brand">alex.dev</a>
       <button id="themeToggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
       
-      <!-- Mobile Menu Toggle Button -->
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -96,36 +94,9 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
+      <p>© Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
-
-  <script>
-    // Theme toggle
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    });
-
-    // Mobile navigation toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    function toggleMenu(open) {
-      const isOpen = open ?? !navLinks.classList.contains('open');
-      navLinks.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-    }
-
-    navToggle.addEventListener('click', () => toggleMenu());
-    navLinks.addEventListener('click', (e) => {
-      if (e.target.closest('a')) toggleMenu(false);
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') toggleMenu(false);
-    });
-  </script>
 
 </body>
 
