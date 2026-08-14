@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Doe — Portfolio</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="header">
-    <nav class="nav">
+  <header>
+    <nav>
       <a href="#" class="brand">alex.dev</a>
+      <button id="themeToggle">🌓</button>
     </nav>
   </header>
 
@@ -17,13 +20,58 @@
     <section id="home">
       <h1>Alex Doe</h1>
       <p>Front-end Developer</p>
+      <a href="#projects">View my work</a>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a developer based in Berlin who loves turning ideas into clean, functional interfaces.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div>
+        <h3>Task Tracker</h3>
+        <p>A kanban-style productivity app.</p>
+      </div>
+      <div>
+        <h3>Weather Widget</h3>
+        <p>A responsive weather dashboard.</p>
+      </div>
+      <div>
+        <h3>Design System</h3>
+        <p>A documented component library.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <a href="mailto:hello@alex.dev">hello@alex.dev</a>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <p>&copy; Alex Doe</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 </body>
+
 </html>
