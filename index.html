@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
+  <meta name="description"
+    content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
   <title>Alex Doe — Front-End Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -51,22 +52,22 @@
       </div>
     </section>
 
-    <section id="projects" class="section section--alt">
+    <section id="projects" class="section">
       <div class="container">
         <h2 class="section__title">Projects</h2>
         <div class="grid">
-          <article class="card">
-            <h3>Task Tracker</h3>
-            <p>A kanban-style productivity app.</p>
-          </article>
-          <article class="card">
-            <h3>Weather Widget</h3>
-            <p>A responsive weather dashboard.</p>
-          </article>
-          <article class="card">
-            <h3>Design System</h3>
-            <p>A documented component library.</p>
-          </article>
+          <div class="card">
+            <h3 class="card__title">Task Tracker</h3>
+            <p class="card__text">A kanban-style productivity app.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Weather Widget</h3>
+            <p class="card__text">A responsive weather dashboard.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Design System</h3>
+            <p class="card__text">A documented component library.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -84,9 +85,10 @@
       </div>
     </section>
 
-    <section id="contact" class="section section--alt">
+    <section id="contact" class="section">
       <div class="container">
         <h2 class="section__title">Get in touch</h2>
+        <p>Have a project in mind or just want to say hi?</p>
         <a href="mailto:hello@alex.dev" class="btn btn--primary">hello@alex.dev</a>
       </div>
     </section>
@@ -94,7 +96,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
+      <p>&copy; Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
 
@@ -124,6 +126,7 @@
       if (e.key === 'Escape') toggleMenu(false);
     });
   </script>
+
 </body>
 
 </html>
