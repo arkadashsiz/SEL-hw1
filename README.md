@@ -185,3 +185,6 @@ Update the content in `index.html` (name, bio, projects, links), adjust color to
 ## License
 
 This project is released under the license specified in the `LICENSE` file of the repository.
+
+## Project Address
+the project can be found on the web at https://arkadashsiz.github.io/SEL-hw1/
