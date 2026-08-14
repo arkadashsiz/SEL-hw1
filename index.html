@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
+  <meta name="description"
+    content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
   <title>Alex Doe — Front-End Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,52 +27,6 @@
   </header>
 
   <main>
-    <section id="home">
-      <h1>Alex Doe</h1>
-      <p>Front-end Developer</p>
-      <a href="#projects">View my work</a>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>I'm a developer based in Berlin who loves turning ideas into clean, functional interfaces.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div>
-        <h3>Task Tracker</h3>
-        <p>A kanban-style productivity app.</p>
-      </div>
-      <div>
-        <h3>Weather Widget</h3>
-        <p>A responsive weather dashboard.</p>
-      </div>
-      <div>
-        <h3>Design System</h3>
-        <p>A documented component library.</p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Git</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Get in touch</h2>
-      <a href="mailto:hello@alex.dev">hello@alex.dev</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Alex Doe</p>
     <section id="home" class="hero">
       <div class="container hero__inner">
         <p class="hero__eyebrow">Hello, I'm</p>
@@ -90,11 +45,52 @@
         </p>
       </div>
     </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 class="card__title">Task Tracker</h3>
+            <p class="card__text">A kanban-style productivity app.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Weather Widget</h3>
+            <p class="card__text">A responsive weather dashboard.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Design System</h3>
+            <p class="card__text">A documented component library.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title">Get in touch</h2>
+        <p>Have a project in mind or just want to say hi?</p>
+        <a href="mailto:hello@alex.dev" class="btn btn--primary">hello@alex.dev</a>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
+      <p>&copy; Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
 
@@ -105,6 +101,7 @@
       html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     });
   </script>
+
 </body>
 
 </html>
