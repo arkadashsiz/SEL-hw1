@@ -4,15 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Doe — Portfolio</title>
+  <meta name="description" content="Portfolio of a front-end developer. Check out my projects, skills, and get in touch.">
+  <title>Alex Doe — Front-End Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#" class="brand">alex.dev</a>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="brand">alex.dev</a>
       <button id="themeToggle">🌓</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -63,6 +72,30 @@
 
   <footer>
     <p>&copy; Alex Doe</p>
+    <section id="home" class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Hello, I'm</p>
+        <h1 class="hero__title">Alex Doe</h1>
+        <p class="hero__subtitle">Front-end developer crafting fast, accessible, and beautiful web experiences.</p>
+        <a href="#projects" class="btn btn--primary">View my work</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p class="section__lead">
+          I'm a developer based in Berlin who loves turning ideas into clean, functional interfaces.
+          I care about performance, accessibility, and writing code that other people enjoy reading.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© Alex Doe. Built with pure HTML, CSS &amp; JavaScript.</p>
+    </div>
   </footer>
 
   <script>
